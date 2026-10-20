@@ -3,53 +3,206 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Renew Support</title>
-  <meta name="description" content="Renew reminds you when to replace filters, brush heads, blades and other consumables, and keeps a history of every replacement.">
+  <title>Renew: Replacement Tracker</title>
+  <meta name="description" content="Renew reminds you when to replace filters, toothbrush heads, razor blades and other things that wear out, and keeps a history of every replacement. For iPhone, iPad and Mac.">
+  <meta name="theme-color" content="#00897f">
   <link rel="icon" href="icon.png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="apple-touch-icon" href="icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ehcrea.github.io/renew-site/">
+  <meta property="og:title" content="Renew: never forget to change a filter again">
+  <meta property="og:description" content="Replacement reminders for filters, brush heads, blades and more. For iPhone, iPad and Mac.">
+  <meta property="og:image" content="https://ehcrea.github.io/renew-site/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Renew: never forget to change a filter again">
+  <meta name="twitter:description" content="Replacement reminders for filters, brush heads, blades and more. For iPhone, iPad and Mac.">
+  <meta name="twitter:image" content="https://ehcrea.github.io/renew-site/img/og-image.jpg">
+  <link rel="stylesheet" href="home.css">
 </head>
 <body>
-<main>
-  <header class="hero">
-    <img src="icon.png" alt="Renew app icon">
-    <div>
-      <h1>Renew</h1>
-      <p class="subtitle">Replacement reminders for iPhone, iPad and Mac</p>
-    </div>
-  </header>
 
-  <p>Renew reminds you when it's time to replace things that wear out, like air purifier filters, toothbrush heads, water filters and razor blades, and keeps a history of every replacement.</p>
-
-  <h2>Frequently asked questions</h2>
-
-  <div class="card">
-    <h3>How do I log a replacement?</h3>
-    <p>Open an item and tap <strong>Replaced today</strong>, or swipe right on it in the list. Use <strong>Replaced on another day…</strong> to pick a different date. The countdown restarts from the date you log.</p>
-
-    <h3>When do reminders appear?</h3>
-    <p>On the due date, at the time set in <strong>Settings → Reminders</strong> (9:00 by default). From the notification you can mark the item as replaced or snooze it until tomorrow.</p>
-
-    <h3>I'm not getting reminders.</h3>
-    <p>Make sure notifications are allowed for Renew in your device settings. Renew shows a warning in the app when they're turned off. Also check that <strong>Remind me on this device</strong> is on in Renew's Settings.</p>
-
-    <h3>How does sync work?</h3>
-    <p>With <strong>iCloud Sync</strong> on, Renew keeps your items in your private iCloud database, so all devices signed in to the same Apple Account show the same items. Sync is automatic. Changes usually appear within a minute while the app is open.</p>
-
-    <h3>I get the same reminder on every device.</h3>
-    <p>Each device schedules its own reminders. Turn off <strong>Remind me on this device</strong> on the devices where you don't want them.</p>
-
-    <h3>Can I use Renew without iCloud?</h3>
-    <p>Yes. Turn off iCloud Sync and your data stays on that device only.</p>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="index.html"><img src="icon.png" alt="">Renew</a>
+    <nav class="topnav">
+      <a href="#features">Features</a>
+      <a href="#devices">Devices</a>
+      <a href="#requirements">Requirements</a>
+      <a href="support.html">Support</a>
+    </nav>
   </div>
+</header>
 
-  <h2 id="contact">Contact</h2>
-  <p>Found a bug or have a suggestion? Please <a href="https://github.com/ehcrea/renew-site/issues">open an issue</a>. Include your device, system version and what happened.</p>
+<main>
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow">For iPhone, iPad and Mac</p>
+        <h1>Never forget to change a filter again.</h1>
+        <p class="lead">Renew reminds you when it's time to replace the things that wear out, like water filters, toothbrush heads and razor blades, and keeps a history of every replacement.</p>
+        <div class="cta">
+          <span class="store-btn" aria-label="Coming soon on the App Store">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.6 2.18-1.53 2.66-.39 6.6 1.1 8.76.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.41 1.2-2.47-.03-.01-2.3-.88-2.28-3.52zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.93.58-2.55 1.31-.56.64-1.05 1.68-.92 2.67.97.08 1.96-.49 2.57-1.22z"/></svg>
+            <span><small>Coming soon on the</small>App Store</span>
+          </span>
+          <span class="price">$1.99 one-time purchase · No subscription</span>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <img class="art-mac" src="img/mac-detail.jpg" alt="" width="1600" height="1000">
+        <img class="art-phone" src="img/iphone-home.jpg" alt="" width="660" height="1434">
+      </div>
+    </div>
+  </section>
 
-  <nav>
-    <a href="index.html">Support</a>
-    <a href="privacy.html">Privacy Policy</a>
-  </nav>
-  <p class="muted">© 2026 ehcrea</p>
+  <section class="steps">
+    <div class="wrap">
+      <ol class="step-list">
+        <li><span class="num">1</span><h3>Add what wears out</h3><p>Pick from 25 ready-made items with typical replacement intervals, or create your own.</p></li>
+        <li><span class="num">2</span><h3>Get reminded</h3><p>A notification arrives on the due date, at the time you choose.</p></li>
+        <li><span class="num">3</span><h3>Log it in one tap</h3><p>Mark it as replaced and the countdown starts again from that day.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="features" class="section">
+    <div class="wrap">
+      <h2 class="section-title">Small app, real peace of mind</h2>
+      <p class="section-lead">Everything you need to keep up with filters, brush heads and blades, and nothing you don't.</p>
+      <div class="feature-grid">
+        <article class="feature">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <h3>Log in one tap</h3>
+          <p>Tap or swipe to mark something as replaced today, or pick another date. The countdown restarts from the day you actually replaced it.</p>
+        </article>
+        <article class="feature">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+          <h3>Reminders that fit you</h3>
+          <p>Choose the reminder time, mark items as replaced or snooze them right from the notification, and pick which devices remind you.</p>
+        </article>
+        <article class="feature">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 9 9"/></svg>
+          <h3>See what's due at a glance</h3>
+          <p>A ring for each item shows how much life is left. Overdue and soon-due items are sorted to the top.</p>
+        </article>
+        <article class="feature">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg>
+          <h3>History and insights</h3>
+          <p>See every past replacement, how long each one lasted, and the average lifespan.</p>
+        </article>
+        <article class="feature">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+          <h3>Syncs with iCloud</h3>
+          <p>Your items stay in sync through your private iCloud account. Prefer to keep it on one device? Turn sync off.</p>
+        </article>
+        <article class="feature">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+          <h3>Private by design</h3>
+          <p>No account, no ads, no tracking. Your data stays on your devices and in your own iCloud.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="showcase">
+    <div class="wrap showcase-grid">
+      <figure><img src="img/iphone-detail.jpg" alt="Renew showing an electric toothbrush head with 92 days left" loading="lazy" width="660" height="1434"><figcaption>Every item has its own countdown</figcaption></figure>
+      <figure><img src="img/iphone-add.jpg" alt="Renew's list of ready-made items such as air purifier filter and shower filter" loading="lazy" width="660" height="1434"><figcaption>25 ready-made items to start with</figcaption></figure>
+      <figure><img src="img/iphone-dark.jpg" alt="Renew in dark mode showing a fridge water filter that is 7 days overdue" loading="lazy" width="660" height="1434"><figcaption>Light and dark appearance</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="devices" class="section">
+    <div class="wrap">
+      <h2 class="section-title">One app for every screen</h2>
+      <p class="section-lead">Buy once and use Renew on your iPhone, iPad and Mac. A native app on each, kept in sync by iCloud.</p>
+
+      <div class="device-row">
+        <figure class="device mac">
+          <img src="img/mac-dark.jpg" alt="Renew on Mac in dark mode with the list and an item side by side" loading="lazy" width="1600" height="1000">
+          <figcaption><strong>Mac</strong>A native Mac app with a sidebar and its own Settings window.</figcaption>
+        </figure>
+        <figure class="device ipad">
+          <img src="img/ipad-detail.jpg" alt="Renew on iPad with the list and an item side by side" loading="lazy" width="1100" height="1466">
+          <figcaption><strong>iPad</strong>Your list and the selected item side by side.</figcaption>
+        </figure>
+      </div>
+
+      <div class="duo">
+        <div class="duo-text">
+          <p class="eyebrow">New</p>
+          <h3>Made for iPhone Duo</h3>
+          <p>Folded, Renew shows your list on the outer screen. Unfold it and the most urgent item opens right next to the list. Fold it again and you're back to your list.</p>
+        </div>
+        <div class="duo-art">
+          <figure><img src="img/duo-outer.jpg" alt="Renew on the iPhone Duo outer screen" loading="lazy" width="560" height="815"><figcaption>Folded</figcaption></figure>
+          <figure><img src="img/duo-inner.jpg" alt="Renew on the unfolded iPhone Duo with the list and an item side by side" loading="lazy" width="1200" height="844"><figcaption>Unfolded</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="requirements" class="section alt">
+    <div class="wrap">
+      <h2 class="section-title">Compatibility and requirements</h2>
+      <div class="req-grid">
+        <div class="req-card">
+          <h3>Devices</h3>
+          <table>
+            <tr><th>iPhone</th><td>iOS 18 or later</td></tr>
+            <tr><th>iPad</th><td>iPadOS 18 or later</td></tr>
+            <tr><th>Mac</th><td>macOS 15 Sequoia or later<br><span class="muted">Apple silicon and Intel</span></td></tr>
+            <tr><th>iPhone Duo</th><td>Outer and inner screens</td></tr>
+          </table>
+        </div>
+        <div class="req-card">
+          <h3>Good to know</h3>
+          <table>
+            <tr><th>Price</th><td>$1.99, one-time purchase. No subscription, no in-app purchases.</td></tr>
+            <tr><th>Sync</th><td>Optional. Needs the same Apple Account signed in to iCloud on each device.</td></tr>
+            <tr><th>Account</th><td>None needed. Works offline.</td></tr>
+            <tr><th>Accessibility</th><td>VoiceOver, Dynamic Type, Dark Mode</td></tr>
+          </table>
+        </div>
+        <div class="req-card">
+          <h3>Languages</h3>
+          <ul class="lang-list">
+            <li>English</li><li>Chinese (Simplified)</li><li>Dutch</li><li>French</li><li>German</li><li>Italian</li><li>Japanese</li><li>Korean</li><li>Portuguese (Brazil)</li><li>Spanish</li><li>Turkish</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section privacy-band">
+    <div class="wrap privacy-inner">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+      <div>
+        <h2>Your data is yours</h2>
+        <p>Renew has no servers, no analytics and no ads. Nothing you track ever reaches the developer. <a href="privacy.html">Read the privacy policy</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="support" class="section">
+    <div class="wrap support-inner">
+      <h2 class="section-title">Questions or ideas?</h2>
+      <p class="section-lead">Read the <a href="support.html">frequently asked questions</a>, or <a href="https://github.com/ehcrea/renew-site/issues">open an issue</a> to report a bug or suggest a feature.</p>
+    </div>
+  </section>
 </main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span>© 2026 ehcrea</span>
+    <nav>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </div>
+</footer>
+
 </body>
 </html>
