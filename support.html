@@ -6,10 +6,46 @@
   <title>Renew Support</title>
   <meta name="description" content="Renew reminds you when to replace filters, brush heads, blades and other consumables, and keeps a history of every replacement.">
   <link rel="icon" href="icon.png">
+  <link rel="canonical" href="https://ehcrea.github.io/renew-site/support.html">
+  <link rel="alternate" hreflang="en" href="https://ehcrea.github.io/renew-site/support.html">
+  <link rel="alternate" hreflang="de" href="https://ehcrea.github.io/renew-site/de/support.html">
+  <link rel="alternate" hreflang="es" href="https://ehcrea.github.io/renew-site/es/support.html">
+  <link rel="alternate" hreflang="fr" href="https://ehcrea.github.io/renew-site/fr/support.html">
+  <link rel="alternate" hreflang="it" href="https://ehcrea.github.io/renew-site/it/support.html">
+  <link rel="alternate" hreflang="ja" href="https://ehcrea.github.io/renew-site/ja/support.html">
+  <link rel="alternate" hreflang="ko" href="https://ehcrea.github.io/renew-site/ko/support.html">
+  <link rel="alternate" hreflang="nl" href="https://ehcrea.github.io/renew-site/nl/support.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://ehcrea.github.io/renew-site/pt-br/support.html">
+  <link rel="alternate" hreflang="tr" href="https://ehcrea.github.io/renew-site/tr/support.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://ehcrea.github.io/renew-site/zh-hans/support.html">
+  <link rel="alternate" hreflang="x-default" href="https://ehcrea.github.io/renew-site/support.html">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <main>
+  <div class="page-top">
+    <details class="lang-menu">
+      <summary aria-label="Language">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18"/></svg>
+        <span>English</span>
+        <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </summary>
+      <ul>
+          <li><a href="support.html" hreflang="en" lang="en" data-lang="en" aria-current="true">English</a></li>
+          <li><a href="de/support.html" hreflang="de" lang="de" data-lang="de">Deutsch</a></li>
+          <li><a href="es/support.html" hreflang="es" lang="es" data-lang="es">Español</a></li>
+          <li><a href="fr/support.html" hreflang="fr" lang="fr" data-lang="fr">Français</a></li>
+          <li><a href="it/support.html" hreflang="it" lang="it" data-lang="it">Italiano</a></li>
+          <li><a href="ja/support.html" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li>
+          <li><a href="ko/support.html" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li>
+          <li><a href="nl/support.html" hreflang="nl" lang="nl" data-lang="nl">Nederlands</a></li>
+          <li><a href="pt-br/support.html" hreflang="pt-BR" lang="pt-BR" data-lang="pt-br">Português (Brasil)</a></li>
+          <li><a href="tr/support.html" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li>
+          <li><a href="zh-hans/support.html" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-hans">简体中文</a></li>
+      </ul>
+    </details>
+  </div>
+
   <header class="hero">
     <img src="icon.png" alt="Renew app icon">
     <div>
@@ -19,6 +55,7 @@
   </header>
 
   <p>Renew reminds you when it's time to replace things that wear out, like air purifier filters, toothbrush heads, water filters and razor blades, and keeps a history of every replacement.</p>
+
 
   <h2>Frequently asked questions</h2>
 
@@ -52,5 +89,13 @@
   </nav>
   <p class="muted">© 2026 ehcrea</p>
 </main>
+
+<script>
+  document.querySelectorAll('.lang-menu a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      try { localStorage.setItem('renew-lang', a.dataset.lang); } catch (e) {}
+    });
+  });
+</script>
 </body>
 </html>
