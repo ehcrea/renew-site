@@ -74,3 +74,35 @@ nav {
 }
 
 ul { padding-left: 22px; }
+
+/* Language menu, top right */
+.page-top { display: flex; justify-content: flex-end; margin: -24px 0 20px; }
+.lang-menu { position: relative; }
+.lang-menu summary {
+  display: flex; align-items: center; gap: 6px; cursor: pointer; list-style: none;
+  font-size: 14px; color: var(--muted);
+  border: 1px solid var(--border); border-radius: 999px; padding: 5px 10px 5px 8px;
+  background: var(--card);
+}
+.lang-menu summary::-webkit-details-marker { display: none; }
+.lang-menu summary:hover { color: var(--text); }
+.lang-menu summary svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.lang-menu summary .chev { width: 12px; height: 12px; transition: transform .15s; }
+.lang-menu[open] summary .chev { transform: rotate(180deg); }
+.lang-menu ul {
+  position: absolute; top: calc(100% + 8px); right: 0; z-index: 20;
+  list-style: none; margin: 0; padding: 6px; min-width: 200px;
+  background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+  box-shadow: 0 18px 40px -18px rgba(10, 40, 38, 0.35);
+}
+.lang-menu li a { display: block; padding: 7px 12px; border-radius: 9px; color: var(--text); font-size: 15px; }
+.lang-menu li a:hover { background: var(--bg); text-decoration: none; }
+.lang-menu li a[aria-current] { color: var(--accent); font-weight: 600; }
+
+/* Long single-word headings (German, Dutch) wrap instead of widening the page. */
+h1, h2 { overflow-wrap: break-word; -webkit-hyphens: auto; hyphens: auto; }
+header.hero div { min-width: 0; }
+@media (max-width: 480px) {
+  h1 { font-size: 28px; }
+  header.hero img { width: 60px; height: 60px; border-radius: 14px; }
+}

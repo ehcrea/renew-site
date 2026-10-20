@@ -6,10 +6,46 @@
   <title>Renew Privacy Policy</title>
   <meta name="description" content="Privacy policy for Renew, the replacement reminder app for iPhone, iPad and Mac.">
   <link rel="icon" href="icon.png">
+  <link rel="canonical" href="https://ehcrea.github.io/renew-site/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://ehcrea.github.io/renew-site/privacy.html">
+  <link rel="alternate" hreflang="de" href="https://ehcrea.github.io/renew-site/de/privacy.html">
+  <link rel="alternate" hreflang="es" href="https://ehcrea.github.io/renew-site/es/privacy.html">
+  <link rel="alternate" hreflang="fr" href="https://ehcrea.github.io/renew-site/fr/privacy.html">
+  <link rel="alternate" hreflang="it" href="https://ehcrea.github.io/renew-site/it/privacy.html">
+  <link rel="alternate" hreflang="ja" href="https://ehcrea.github.io/renew-site/ja/privacy.html">
+  <link rel="alternate" hreflang="ko" href="https://ehcrea.github.io/renew-site/ko/privacy.html">
+  <link rel="alternate" hreflang="nl" href="https://ehcrea.github.io/renew-site/nl/privacy.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://ehcrea.github.io/renew-site/pt-br/privacy.html">
+  <link rel="alternate" hreflang="tr" href="https://ehcrea.github.io/renew-site/tr/privacy.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://ehcrea.github.io/renew-site/zh-hans/privacy.html">
+  <link rel="alternate" hreflang="x-default" href="https://ehcrea.github.io/renew-site/privacy.html">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <main>
+  <div class="page-top">
+    <details class="lang-menu">
+      <summary aria-label="Language">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18"/></svg>
+        <span>English</span>
+        <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </summary>
+      <ul>
+          <li><a href="privacy.html" hreflang="en" lang="en" data-lang="en" aria-current="true">English</a></li>
+          <li><a href="de/privacy.html" hreflang="de" lang="de" data-lang="de">Deutsch</a></li>
+          <li><a href="es/privacy.html" hreflang="es" lang="es" data-lang="es">Español</a></li>
+          <li><a href="fr/privacy.html" hreflang="fr" lang="fr" data-lang="fr">Français</a></li>
+          <li><a href="it/privacy.html" hreflang="it" lang="it" data-lang="it">Italiano</a></li>
+          <li><a href="ja/privacy.html" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li>
+          <li><a href="ko/privacy.html" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li>
+          <li><a href="nl/privacy.html" hreflang="nl" lang="nl" data-lang="nl">Nederlands</a></li>
+          <li><a href="pt-br/privacy.html" hreflang="pt-BR" lang="pt-BR" data-lang="pt-br">Português (Brasil)</a></li>
+          <li><a href="tr/privacy.html" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li>
+          <li><a href="zh-hans/privacy.html" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-hans">简体中文</a></li>
+      </ul>
+    </details>
+  </div>
+
   <header class="hero">
     <img src="icon.png" alt="">
     <div>
@@ -19,6 +55,7 @@
   </header>
 
   <p class="muted">Effective date: October 18, 2026</p>
+
 
   <div class="card">
     <h2>The short version</h2>
@@ -57,7 +94,7 @@
   <p>If this policy changes, the updated version will be published on this page with a new effective date.</p>
 
   <h2>Contact</h2>
-  <p>Questions about privacy? See the <a href="index.html#contact">support page</a>.</p>
+  <p>Questions about privacy? See the <a href="support.html#contact">support page</a>.</p>
 
   <nav>
     <a href="index.html">Renew</a>
@@ -65,5 +102,13 @@
     <a href="privacy.html">Privacy Policy</a>
   </nav>
 </main>
+
+<script>
+  document.querySelectorAll('.lang-menu a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      try { localStorage.setItem('renew-lang', a.dataset.lang); } catch (e) {}
+    });
+  });
+</script>
 </body>
 </html>
