@@ -8,8 +8,22 @@
   <meta name="theme-color" content="#00897f">
   <link rel="icon" href="icon.png">
   <link rel="apple-touch-icon" href="icon.png">
+  <link rel="canonical" href="https://ehcrea.github.io/renew-site/">
+  <link rel="alternate" hreflang="en" href="https://ehcrea.github.io/renew-site/">
+  <link rel="alternate" hreflang="de" href="https://ehcrea.github.io/renew-site/de/">
+  <link rel="alternate" hreflang="es" href="https://ehcrea.github.io/renew-site/es/">
+  <link rel="alternate" hreflang="fr" href="https://ehcrea.github.io/renew-site/fr/">
+  <link rel="alternate" hreflang="it" href="https://ehcrea.github.io/renew-site/it/">
+  <link rel="alternate" hreflang="ja" href="https://ehcrea.github.io/renew-site/ja/">
+  <link rel="alternate" hreflang="ko" href="https://ehcrea.github.io/renew-site/ko/">
+  <link rel="alternate" hreflang="nl" href="https://ehcrea.github.io/renew-site/nl/">
+  <link rel="alternate" hreflang="pt-BR" href="https://ehcrea.github.io/renew-site/pt-br/">
+  <link rel="alternate" hreflang="tr" href="https://ehcrea.github.io/renew-site/tr/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://ehcrea.github.io/renew-site/zh-hans/">
+  <link rel="alternate" hreflang="x-default" href="https://ehcrea.github.io/renew-site/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ehcrea.github.io/renew-site/">
+  <meta property="og:locale" content="en_US">
   <meta property="og:title" content="Renew: never forget to change a filter again">
   <meta property="og:description" content="Replacement reminders for filters, brush heads, blades and more. For iPhone, iPad and Mac.">
   <meta property="og:image" content="https://ehcrea.github.io/renew-site/img/og-image.jpg">
@@ -20,12 +34,49 @@
   <meta name="twitter:description" content="Replacement reminders for filters, brush heads, blades and more. For iPhone, iPad and Mac.">
   <meta name="twitter:image" content="https://ehcrea.github.io/renew-site/img/og-image.jpg">
   <link rel="stylesheet" href="home.css">
+  <script>
+    (function () {
+      var folders = {"de": "de", "es": "es", "fr": "fr", "it": "it", "ja": "ja", "ko": "ko", "nl": "nl", "pt-br": "pt-br", "tr": "tr", "zh-hans": "zh-hans"};
+      try { if (localStorage.getItem('renew-lang')) return; } catch (e) { return; }
+      var langs = navigator.languages || [navigator.language || ''];
+      for (var i = 0; i < langs.length; i++) {
+        var l = langs[i].toLowerCase();
+        if (l.indexOf('en') === 0) return;
+        var hit = folders[l] || folders[l.split('-')[0]];
+        if (l.indexOf('zh') === 0) hit = /hant|tw|hk|mo/.test(l) ? null : folders['zh-hans'];
+        if (l.indexOf('pt') === 0) hit = folders['pt-br'];
+        if (hit) { location.replace(hit + '/' + location.hash); return; }
+      }
+    })();
+  </script>
 </head>
 <body>
 
 <header class="topbar">
   <div class="wrap topbar-inner">
-    <a class="brand" href="index.html"><img src="icon.png" alt="">Renew</a>
+    <div class="topbar-start">
+      <details class="lang-menu">
+        <summary aria-label="Language">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18"/></svg>
+          <span>English</span>
+          <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <ul>
+          <li><a href="index.html" hreflang="en" lang="en" data-lang="en" aria-current="true">English</a></li>
+          <li><a href="de/index.html" hreflang="de" lang="de" data-lang="de">Deutsch</a></li>
+          <li><a href="es/index.html" hreflang="es" lang="es" data-lang="es">Español</a></li>
+          <li><a href="fr/index.html" hreflang="fr" lang="fr" data-lang="fr">Français</a></li>
+          <li><a href="it/index.html" hreflang="it" lang="it" data-lang="it">Italiano</a></li>
+          <li><a href="ja/index.html" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li>
+          <li><a href="ko/index.html" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li>
+          <li><a href="nl/index.html" hreflang="nl" lang="nl" data-lang="nl">Nederlands</a></li>
+          <li><a href="pt-br/index.html" hreflang="pt-BR" lang="pt-BR" data-lang="pt-br">Português (Brasil)</a></li>
+          <li><a href="tr/index.html" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li>
+          <li><a href="zh-hans/index.html" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-hans">简体中文</a></li>
+        </ul>
+      </details>
+      <a class="brand" href="index.html"><img src="icon.png" alt="">Renew</a>
+    </div>
     <nav class="topnav">
       <a href="#features">Features</a>
       <a href="#devices">Devices</a>
@@ -169,7 +220,17 @@
         <div class="req-card">
           <h3>Languages</h3>
           <ul class="lang-list">
-            <li>English</li><li>Chinese (Simplified)</li><li>Dutch</li><li>French</li><li>German</li><li>Italian</li><li>Japanese</li><li>Korean</li><li>Portuguese (Brazil)</li><li>Spanish</li><li>Turkish</li>
+            <li>English</li>
+            <li>Chinese (Simplified)</li>
+            <li>Dutch</li>
+            <li>French</li>
+            <li>German</li>
+            <li>Italian</li>
+            <li>Japanese</li>
+            <li>Korean</li>
+            <li>Portuguese (Brazil)</li>
+            <li>Spanish</li>
+            <li>Turkish</li>
           </ul>
         </div>
       </div>
@@ -204,5 +265,13 @@
   </div>
 </footer>
 
+<script>
+  // Remember a language the visitor picks, so the English home page stops suggesting another one.
+  document.querySelectorAll('.lang-menu a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      try { localStorage.setItem('renew-lang', a.dataset.lang); } catch (e) {}
+    });
+  });
+</script>
 </body>
 </html>

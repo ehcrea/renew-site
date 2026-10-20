@@ -54,6 +54,33 @@ a:hover { text-decoration: underline; }
 .brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 700; font-size: 18px; }
 .brand:hover { text-decoration: none; }
 .brand img { width: 30px; height: 30px; border-radius: 7px; }
+.topbar-start { display: flex; align-items: center; gap: 14px; }
+
+/* Language menu, top left */
+.lang-menu { position: relative; }
+.lang-menu summary {
+  display: flex; align-items: center; gap: 6px; cursor: pointer; list-style: none;
+  font-size: 14px; color: var(--muted);
+  border: 1px solid var(--border); border-radius: 999px; padding: 5px 10px 5px 8px;
+  background: var(--card);
+}
+.lang-menu summary::-webkit-details-marker { display: none; }
+.lang-menu summary:hover { color: var(--text); }
+.lang-menu summary svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.lang-menu summary .chev { width: 12px; height: 12px; transition: transform .15s; }
+.lang-menu[open] summary .chev { transform: rotate(180deg); }
+.lang-menu ul {
+  position: absolute; top: calc(100% + 8px); left: 0; z-index: 20;
+  list-style: none; margin: 0; padding: 6px; min-width: 200px;
+  background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+.lang-menu li a {
+  display: block; padding: 7px 12px; border-radius: 9px; color: var(--text); font-size: 15px;
+}
+.lang-menu li a:hover { background: var(--bg-alt); text-decoration: none; }
+.lang-menu li a[aria-current] { color: var(--accent); font-weight: 600; }
+
 .topnav { display: flex; gap: 22px; font-size: 15px; }
 .topnav a { color: var(--muted); }
 .topnav a:hover { color: var(--text); text-decoration: none; }
@@ -186,6 +213,7 @@ figcaption { color: var(--muted); font-size: 15px; text-align: center; margin-to
   body { font-size: 16px; }
   .wrap { padding: 0 16px; }
   .topnav a:not(:last-child) { display: none; }
+  .lang-menu summary span { display: none; }
   .step-list, .feature-grid, .req-grid { grid-template-columns: 1fr; }
   .showcase-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
   .showcase figure:last-child { display: none; }
