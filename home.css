@@ -223,3 +223,13 @@ figcaption { color: var(--muted); font-size: 15px; text-align: center; margin-to
   .privacy-inner { flex-direction: column; padding: 26px; }
   .art-phone { right: 0; }
 }
+
+/* Social links: logos in their own row at the bottom, apart from the page links */
+.social { display: flex; gap: 12px; margin: 0 0 18px; }
+.social a {
+  display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
+  color: var(--muted); border: 1px solid var(--border); background: var(--card);
+  transition: color .15s, border-color .15s;
+}
+.social a:hover, .social a:focus-visible { color: var(--accent); border-color: var(--accent); text-decoration: none; }
+.social svg { width: 20px; height: 20px; }
