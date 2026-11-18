@@ -70,7 +70,7 @@ a:hover { text-decoration: underline; }
 .lang-menu summary .chev { width: 12px; height: 12px; transition: transform .15s; }
 .lang-menu[open] summary .chev { transform: rotate(180deg); }
 .lang-menu ul {
-  position: absolute; top: calc(100% + 8px); right: 0; z-index: 20;
+  position: absolute; top: calc(100% + 8px); inset-inline-end: 0; z-index: 20;
   list-style: none; margin: 0; padding: 6px; min-width: 200px;
   background: var(--card); border: 1px solid var(--border); border-radius: 14px;
   box-shadow: var(--shadow);
@@ -114,7 +114,7 @@ a:hover { text-decoration: underline; }
 .hero-art { position: relative; padding: 0 0 40px 0; }
 .art-mac { border-radius: 12px; box-shadow: var(--shadow); border: 1px solid var(--border); }
 .art-phone {
-  position: absolute; right: -10px; bottom: 0; width: 30%;
+  position: absolute; inset-inline-end: -10px; bottom: 0; width: 30%;
   border-radius: 26px; box-shadow: var(--shadow); border: 1px solid var(--border);
 }
 
@@ -156,7 +156,7 @@ figcaption { color: var(--muted); font-size: 15px; text-align: center; margin-to
 .device-row { display: grid; grid-template-columns: 1.7fr 1fr; gap: 28px; align-items: end; }
 .device img { border-radius: 14px; box-shadow: var(--shadow); border: 1px solid var(--border); }
 .device.ipad img { border-radius: 22px; }
-.device figcaption { text-align: left; }
+.device figcaption { text-align: start; }
 .device figcaption strong { display: block; color: var(--text); font-size: 17px; }
 
 .duo {
@@ -174,7 +174,7 @@ figcaption { color: var(--muted); font-size: 15px; text-align: center; margin-to
 .req-card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 22px 24px; }
 .req-card h3 { margin: 0 0 10px; font-size: 18px; }
 .req-card table { width: 100%; border-collapse: collapse; font-size: 15px; }
-.req-card th { text-align: left; font-weight: 600; padding: 9px 12px 9px 0; vertical-align: top; white-space: nowrap; }
+.req-card th { text-align: start; font-weight: 600; padding-block: 9px; padding-inline: 0 12px; vertical-align: top; white-space: nowrap; }
 .req-card td { padding: 9px 0; color: var(--muted); }
 .req-card tr + tr th, .req-card tr + tr td { border-top: 1px solid var(--border); }
 .muted { color: var(--muted); font-size: 14px; }
@@ -223,7 +223,7 @@ figcaption { color: var(--muted); font-size: 15px; text-align: center; margin-to
   .showcase img { border-radius: 20px; }
   .section { padding: 52px 0; }
   .privacy-inner { flex-direction: column; padding: 26px; }
-  .art-phone { right: 0; }
+  .art-phone { inset-inline-end: 0; }
 }
 
 /* Social links: logos in their own row at the bottom, apart from the page links */
@@ -235,3 +235,6 @@ figcaption { color: var(--muted); font-size: 15px; text-align: center; margin-to
 }
 .social a:hover, .social a:focus-visible { color: var(--accent); border-color: var(--accent); text-decoration: none; }
 .social svg { width: 20px; height: 20px; }
+
+/* Arabic: no tracking, it would pull joined letters apart */
+:lang(ar) * { letter-spacing: normal !important; }
