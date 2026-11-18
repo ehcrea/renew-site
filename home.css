@@ -147,7 +147,7 @@ a:hover { text-decoration: underline; }
 
 /* Showcase */
 .showcase { padding: 8px 0 24px; }
-.showcase-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: 920px; }
+.showcase-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; max-width: 1120px; }
 .showcase figure, .device-row figure, .duo-art figure { margin: 0; }
 .showcase img { border-radius: 28px; box-shadow: var(--shadow); border: 1px solid var(--border); }
 figcaption { color: var(--muted); font-size: 15px; text-align: center; margin-top: 12px; }
@@ -220,7 +220,6 @@ figcaption { color: var(--muted); font-size: 15px; text-align: center; margin-to
   .topbar-end { gap: 14px; }
   .step-list, .feature-grid, .req-grid { grid-template-columns: 1fr; }
   .showcase-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
-  .showcase figure:last-child { display: none; }
   .showcase img { border-radius: 20px; }
   .section { padding: 52px 0; }
   .privacy-inner { flex-direction: column; padding: 26px; }
